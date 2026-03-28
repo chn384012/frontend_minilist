@@ -48,16 +48,15 @@ function addItem() {
 
 // 5.리스트 클릭 핸들러 (이벤트 위임 적용)
 function handleListClick(event) {
-  const target = event.target;
-  const li = target.closest("li");
-
-  if (!li) return; // li 외부 클릭 시 무시
+  const target = event.target; // 실제 클릭된 요소
+  const li = target.closest("li"); // 클릭된 요소의 가장 가까운 li 부모 찾기
+  if (!li) return; // li 외부 빈 공간 클릭 시 무시
 
   // 삭제 버튼을 클릭한 경우
   if (target.classList.contains("delete-btn")) {
     li.remove();
   }
-  // 리스트 텍스트나 여백을 클릭한 경우 (상태 변경)
+  // 리스트 항목 텍스트 부분을 클릭한 경우 (상태 변경)
   else {
     li.classList.toggle("done");
   }
