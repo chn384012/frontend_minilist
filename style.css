@@ -29,6 +29,28 @@ body {
   cursor: pointer;
 }
 
+/* 필터 버튼 스타일 */
+.filter-group {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-btn.active {
+  background-color: #ff7710;
+  color: white;
+  border-color: #ff7710;
+}
+
 #itemList {
   list-style: none;
   padding: 0;

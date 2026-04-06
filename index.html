@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>미니 리스트 만들기</title>
+    <title>미니 리스트 만들기(확장)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,6 +12,11 @@
       <div class="input-wrapper">
         <input type="text" id="itemInput" placeholder="할 일을 입력하세요" />
         <button id="addButton">추가</button>
+      </div>
+      <div class="filter-group" id="filterGroup">
+        <button class="filter-btn active" data-filter="all">전체 보기</button>
+        <button class="filter-btn" data-filter="done">완료 항목</button>
+        <button class="filter-btn" data-filter="undone">미완료 항목</button>
       </div>
       <ul id="itemList"></ul>
     </div>
