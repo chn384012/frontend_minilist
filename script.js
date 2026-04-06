@@ -25,9 +25,9 @@ async function addItem() {
     return;
   }
 
-  // Promise를 이용한 지연 렌더링 (0.5초 대기)
+  // Promise를 이용한 지연 렌더링
   // await는 Promise가 끝날 때까지 기다린 뒤 다음 코드를 실행
-  await delayRender(500);
+  await delayRender(500); // (0.5초 대기)
 
   // DOM에 바로 추가하지 않고 배열에 저장
   const newTodo = {
@@ -105,7 +105,7 @@ function handleListClick(event) {
   const todoId = Number(li.dataset.id);
 
   if (target.classList.contains("delete-btn")) {
-    // 배열에서 해당 id를 가진 항목을 제외(filter)하여 삭제 효과 구현
+    // 배열에서 해당 id를 가진 항목을 제외하여 삭제 효과 구현
     todos = todos.filter((todo) => todo.id !== todoId);
   } else {
     // 클릭한 항목의 상태(done)를 반전시킴
